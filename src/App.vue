@@ -1,15 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <nav><linksVue></linksVue></nav>
+  <main><mainVue></mainVue></main>
+  
+  <!-- <SerchingVue/> -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import  mainVue  from "./components/main.vue";
+import linksVue from './components/links.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    mainVue, 
+    linksVue
+  }, 
+  updated(){
+    
   }
 }
 </script>
@@ -22,5 +29,17 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+  height: 100%;
+}
+.links{
+  height: 20%;
+}
+template{
+  width: 100%;
 }
 </style>
